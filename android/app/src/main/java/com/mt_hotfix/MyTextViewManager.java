@@ -7,6 +7,7 @@ import android.widget.TextView;
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
+import com.meituan.robust.patch.annotaion.Modify;
 
 public class MyTextViewManager extends SimpleViewManager<TextView> {
 
@@ -23,21 +24,19 @@ public class MyTextViewManager extends SimpleViewManager<TextView> {
     }
 
     @ReactProp(name = "text")
+    @Modify
     public void setText(TextView view, String text) {
-        Log.d(REACT_CLASS, text);
-        String mText = text + "1122365";
+        String mText = text + "123456789";
         view.setText(mText);
     }
 
     @ReactProp(name = "textSize", defaultFloat = 20f)
     public void setTextSize(TextView view, float size) {
-        Log.d(REACT_CLASS, size + "");
         view.setTextSize(size);
     }
 
     @ReactProp(name = "textColor", defaultInt = 0xFF0000)
     public void setTextColor(TextView view, int color) {
-        Log.d(REACT_CLASS, color + "");
         view.setTextColor(Color.BLUE);
     }
 

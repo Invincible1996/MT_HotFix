@@ -20,7 +20,7 @@ export default class App extends Component {
         <TouchableOpacity onPress={() => TestModule.startActivity()}>
           <Text>打开原生的Activity</Text>
         </TouchableOpacity>
-        <RCTTextView text={'我是原生的textView'} textSize={22}
+        <RCTTextView text={'textView'} textSize={22}
                      style={{ width: Dimensions.get('window').width *0.85, height: 50,backgroundColor:'red' }} />
       </View>
     )
